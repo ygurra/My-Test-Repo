@@ -24,7 +24,7 @@ module "vnet_peer_stackguardian_to_fwhub" {
     allow_gateway_transit = false
     use_remote_gateways = true
     
-    providers = {ls -allow_forwarded_traffic{
+    providers = {
       azurerm = azurerm.FD_PROD
     }
   depends_on = [ module.vnet_peer_fwhub_to_stackguardian ]
